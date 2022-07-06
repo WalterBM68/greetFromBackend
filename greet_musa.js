@@ -1,20 +1,33 @@
 
-// import greetUser from './greetings.js';
-// console.log(greetUser('Walter'));
+// Combining both chalk and figlet
+let figlet = require('figlet');
+let chalk = require("chalk");
 
-// let musa = require("chalk");
-// let greet = require("./greetings");
-// let stlye = musa.bgRed(greet('Walter'));
-// console.log(stlye);
+figlet('@Walter', function(firstName, secondName){
+    if(firstName) {
+        return;
+    }   
+    let stlyeTheBackground = chalk.bgGreen(secondName);
+    console.log(stlyeTheBackground);
+});
+
+
+// BELOW CODE IS WHERE I WAS PRACTISING!!!
 
 /*
-let musa = require('figlet');
-musa('Walter', function(a, b){
-    if(a) return;
-    console.log(b);
-});
+import greetUser from './greetings.js';
+console.log(greetUser('Walter'));
 */
 
+/*
+let greet = require("chalk");
+// let figlet = require('figlet');
+let greet = require("./greetings");
+let stlye = greet.bgRed(greet('Walter'));
+console.log(stlye);
+*/
+
+/*
 var figlet = require('figlet');
 figlet.text('Broos!', {
     font: 'Ghost',
@@ -23,3 +36,4 @@ figlet.text('Broos!', {
         return;
     console.log(data);
 });
+*/
